@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yueling2015 的个人主页</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --primary-hover: #0056b3;
+            --bg-color: #f4f7f9;
+            --card-bg: #ffffff;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px 20px;
+            text-align: center;
+        }
+
+        .profile {
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--card-bg);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile h1 {
+            margin-top: 20px;
+            font-size: 2.2em;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-info {
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .project-info h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.2em;
+            color: var(--text-primary);
+        }
+
+        .project-info p {
+            margin: 0;
+            font-size: 0.95em;
+            color: var(--text-secondary);
+        }
+
+        .project-tag {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            font-size: 0.75em;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .go-button {
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+
+        .go-button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        @media (max-width: 480px) {
+            .project-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .project-info {
+                text-align: center;
+            }
+            .go-button {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="profile">
+            <!-- 你可以将下面的头像链接替换成你自己的图片链接 -->
+            <img src="https://foruda.gitee.com/avatar/1781882554460647713/16604744_yueling-rice_1781882554.png" alt="yueling2015 的头像">
+            <h1>yueling2015</h1>
+        </header>
+
+        <main class="projects">
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>mac 在线版</h3>
+                    <p>体验 macOS 的在线版本</p>
+                </div>
+                <a href="http://mac.yueling.indevs.in/" class="go-button" target="_blank">GO</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>win11 在线版</h3>
+                    <p>在浏览器中运行 Windows 11</p>
+                </div>
+                <a href="http://win.yueling.indevs.in" class="go-button" target="_blank">GO</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>esp开发版控制器在线版 <span class="project-tag">仅查看日志</span></h3>
+                    <p>用于查看ESP开发板的日志信息</p>
+                </div>
+                <a href="http://esp.yueling.indevs.in" class="go-button" target="_blank">GO</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>mc在线版</h3>
+                    <p>Minecraft 在线游玩</p>
+                </div>
+                <a href="http://mc.yueling.indevs.in" class="go-button" target="_blank">GO</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Ubuntu 快速安装 <span class="project-tag">Fork</span></h3>
+                    <p>在 Win10/11 amd64 上快速安装 Ubuntu 虚拟机</p>
+                </div>
+                <a href="https://gitee.com/yueling-rice/Ubuntu-26.04-Mode-For-Windows" class="go-button" target="_blank">GO</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
